@@ -1,0 +1,303 @@
+:root{
+    /* ------ COLORS ------ */
+
+    /* --- Neutal colors --- */
+    --white: #fff;
+    
+    --gray100: #F8FAFF;
+    --gray200: #F3F6FF;
+    --gray700: #212D4A;
+
+    /* Brand colors */
+    --light-blue: #86AEFC;
+
+
+
+    /* ------ COLOR VARIANTS ------ */
+
+    /* Text */
+    --light-text: var(--white);
+    --dark-text: var(--gray700);
+
+    /* Buttons */
+    --button-primary: var(--gray700);
+    --button-secondary: var(--white);
+
+    /* Tab */
+    --bg-tab: var(--white);
+    --bg-tab-emoji: var(--gray100);
+
+    /* Accordion */
+    --bg-accordion-button: var(--white);
+    --bg-accordion-body: var(--white);
+
+
+    /* ------ TYPOGRAPHY ------ */
+
+    /* Font size */
+    --fz-h1: 40px;
+    --fz-h2: 32px;
+    --fz-title: 20px;
+
+    --fz-default-text: 16px;
+
+    --fz-button-text: 16px;
+
+    /* Font weight */
+    --semibold: 500;
+    --regular: 400;
+
+
+    /* ------ MARGIN ------ */
+    --small-margin: 50px;
+    --default-margin: 180px;
+}
+
+/* Main components */
+
+.body{
+    font-family: Montserrat;
+    font-size: var(--fz-default-text);
+    color: var(--dark-text);
+}
+
+section{
+    margin-top: var(--default-margin);
+}
+
+.offer-section{
+    margin-top: var(--small-margin);
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+margin-left: 0;
+padding-left: 0;
+}
+
+a{
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+/* ------ BUTTONS ------ */
+
+.primary-button{
+    font-weight: var(--semibold);
+
+    color: var(--light-text);
+    background-color: var(--button-primary);
+}
+
+.secondary-button{
+    font-weight: var(--semibold);
+
+    border: none;
+    color: var(--dark-text);
+    background-color: var(--button-secondary);
+}
+
+
+/* ------ Header ------- */
+
+/* Header logo */
+.logo{
+    width: 152px;
+    height: 31px;
+    display: block;
+
+    background-image: url("../img/Logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Menu navigation */
+
+.row.justify-content-between.menu{
+    margin-right: -15px;
+    margin-left: -15px;
+    margin: 20px 0;
+}
+
+.menu__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+/* Header button */
+
+.header-button{
+    width: 100%;
+}
+
+
+/* ------ Slider ------- */
+
+.carousel-wrapper{
+    overflow: hidden;
+}
+
+
+/* ------ Modal and tabs ------- */
+
+/* Modal section */
+
+.modal__modal-trigger-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 24px;
+}
+
+.modal__image-wrapper{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.modal__image{
+    width: 88px;
+    height: 82px;
+}
+
+.modal-header-change{
+    border-bottom: none;
+}
+
+.modal-title-change{
+    margin-bottom: 10px;
+}
+
+.modal-body__tex-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.modal-phone{
+    font-weight: var(--semibold);
+}
+
+.modal-footer-change{
+    justify-content: center;
+
+    border-top: none;
+}
+
+.modal-footer__button{
+    min-width: 100px;
+}
+
+/* Tab section */
+
+.nav-tabs .nav-link{
+    color: var(--dark-text);
+    font-weight: var(--regular);
+}
+
+.nav-tabs .nav-link.active{
+    color: var(--dark-text);
+    font-weight: var(--semibold);
+    border: none;
+
+    background-color: var(--bg-tab);
+}
+
+.nav-tabs{
+    border-bottom: none;
+}
+
+.tabs-wrapper{
+    height: 100%;
+}
+
+.tab-content-change{
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    padding: 20px;
+
+    border-bottom-left-radius: var(--bs-border-radius-xl);
+    border-bottom-right-radius: var(--bs-border-radius-xl);
+    border-top-right-radius: var(--bs-border-radius-xl);
+    background-color: var(--bg-tab);
+}
+
+.tab-content-wrapper{
+    display: flex;
+    gap: 24px;
+
+    align-items: center;
+}
+
+.tab__emoji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 84px;
+    width: 84px;
+
+    border-radius: 50%;
+    background-color: var(--bg-tab-emoji);
+}
+
+
+
+/* ------ Accordion section ------ */
+
+.accordion-title{
+    text-align: center;
+
+    margin-bottom: var(--small-margin);
+}
+
+.accordion-item{
+    border: none;
+}
+
+.accordion-button{
+    font-weight: var(--semibold);
+    color: var(--dark-text);
+
+    background-color: var(--bg-accordion-button);
+}
+
+.accordion-button:not(.collapsed) {
+    font-weight: var(--semibold);
+    color: var(--dark-text);
+
+    background-color: var(--bg-accordion-button);
+}
+
+.accordion-body{
+    background-color: var(--bg-accordion-body);
+}
+
+
+/* ------ Footer ------ */
+
+.footer{
+    margin-top: var(--small-margin);
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo{
+    width: 152px;
+    height: 31px;
+    display: block;
+
+    background-image: url("../img/footer-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
